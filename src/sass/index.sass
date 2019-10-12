@@ -1,0 +1,393 @@
+$textColor : #626262
+$titleColor : #151515
+$rootDir : '../../assets/images/'
+@import 'mix.sass'
+@import '../../node_modules/bootstrap/scss/bootstrap'
+@import '../../node_modules/bootstrap/scss/mixins'
+
+
+
+body html 
+    margin : 0
+    padding : 0
+    height : 100% 
+    font-size : 16px
+    font-family : 'Fira Sans' , Arial, Helvetica, sans-serif
+    background-color : #F4F4F4 
+.nav
+    padding-top : 59px
+    display : block 
+.header 
+    height : 100vh
+li 
+    list-style : none
+.navigation__menu
+    display : flex
+a 
+    text-decoration : none 
+    color : black
+.search__button
+    border : none 
+    width : 20px
+    height : 20px
+    background : url("../../assets/images/search.svg") no-repeat
+    display : inline-block
+.menu__button
+    width : 34px
+    height : 14px 
+    border : none 
+    background : url("../../assets/images/menu_icon.svg") no-repeat
+.offer
+    margin-top : 8%
+    height : 100%
+    width : 100%
+.offer__title
+    font-weight : 700
+    text-align : left
+    font-style : normal
+    font-size : calc(0.375*10em)
+    line-height : 1.2em
+    letter-spacing : -1px
+    color : $titleColor
+.offer__text
+    color : $textColor
+    font-style : normal
+    font-size : calc(0.375*3em)
+    margin-top : calc(0.375*5em)
+.btn
+    border-radius : 0
+    background-color : #3726F2
+    transition : 2s
+    letter-spacing : 0.1em
+    width : 180px
+    height : 50px
+    margin-top : 56px
+.btn:hover
+    background-color : #3121ED
+.be_static
+    position : static 
+.offer_pic
+    height : 110vh
+    width : 55%
+    background : url("../../assets/images/offer_pic.jpg") no-repeat right top
+    position : absolute
+    right : 0
+    top : 140px
+    background-size : 80% 100%
+.video
+    background : url("../../assets/images/video.jpg") no-repeat center center
+    width : 40%
+    height : 33% 
+    position : absolute
+    left : 0
+    bottom : 15%
+    display : flex
+    align-items : center
+    justify-content : center 
+.video::after
+    content : ''
+    background : url("../../assets/images/play_button.svg")
+    width : 65px
+    height : 65px 
+    display : block
+.vh_dep
+    height : 35vh
+.loader
+    padding-top : 189px
+.loader__button
+    width : 62px
+    height : 2px
+    background-color : #C6B393
+    border : 0
+    &:nth-child(1)
+        margin-right : 5px
+    &:hover
+        background-color : #C6B3ff
+.problems__pic
+    width : 100%
+    height : 90vh
+    background-image : url('../../assets/images/problems_pic.jpg')
+    background-repeat   : no-repeat
+
+.problems
+    padding-top : 30%
+.problems__title
+    line-height : 1.125em
+    font-size : 2.5em
+    letter-spacing : -1px
+.problems__text
+    line-height : 1.75em
+    font-weight : 400
+    font-style : normal
+    font-size : 1.125em
+    white-space : pre-line
+.user_info__role
+    color : $textColor
+    font-size : calc(0.0625*18em)
+.user_info__name
+    color : $titleColor
+    font-weight : 500
+    font-size :  calc(0.0625*20em)
+    font-style : normal
+.user__photo
+    width : 65px
+    height : 65px
+    background : url("../../assets/images/user.png") 
+.user
+    display : inline-flex
+    padding-top : 50px 
+.user__info 
+    align-self : center
+    padding-left : 31px
+    padding-top : 3px  
+.services
+    padding-top : 142px 
+.services__icon
+    font-weight : 500
+    font-size : calc(0.0625*14em)
+    line-height : 24px
+    color : #AEAEAE
+    letter-spacing : calc(0.0625*4em)
+    text-transform : uppercase
+.services_anounce__text
+    letter-spacing : -1px
+    color : $titleColor
+    font-weight : 600
+    font-style : normal
+    line-height : 1.3em
+    font-size : calc(0.0625*40em)
+.services__items > li:not(:nth-child(0))
+    padding-top : 21px
+    color : #8d8d8d
+    font-style : normal
+    font-size : calc(0.0625 * 18em)
+    font-weight : 400
+.carousel__image
+    height : 500px
+    background : url("../../assets/images/services_image.jpg") no-repeat
+    display : flex
+    align-items : center
+    justify-content : center
+    &:before
+        content : ''
+        display : block
+        background : url("../../assets/images/play_button.svg") no-repeat
+        width : 65px
+        height : 65px
+.carousel__secondary
+    height : 500px
+    background : url('#{$rootDir}/services_image-2.jpg') no-repeat
+    width : 256px
+    padding : 0
+    margin : 0 
+.carousel
+    padding-top : 100px 
+.control_left
+    @include control_button(50px,50px)
+    background-color : #C4C4C4
+    &::after
+        content : ''
+        background : url("#{$rootDir}/back.svg")
+        width : 10px
+        height : 10px
+.control_right
+    @include control_button(50px,50px)
+    background-color : #C4C4C4
+    &::after
+        content : ''
+        background : url("#{$rootDir}/next.svg")
+        width : 10px
+        height : 10px
+.about 
+    padding-top : 180px
+    height : 100vh 
+.about__image
+    background : url("#{$rootDir}/about_image.jpg") no-repeat
+    height : 50vh
+    width : 50%
+    background-size : contain
+    position : absolute
+    display : flex
+    left : 0
+    &::after 
+        content : ''
+        width : 20vw
+        height : 50vh
+        background-size : contain
+        background-image : url('#{$rootDir}/about_next_image.jpg')
+        background-repeat : no-repeat
+        position : absolute
+        left : 40%
+        top : 30%
+        filter : grayscale(15%)  
+.about__title
+    font-style : normal 
+    font-size : calc(40em*0.0625)
+    color : $titleColor
+    letter-spacing : -1px
+    line-height : 1em 
+.about__text
+    font-size : calc(18em*0.0625)
+    padding-top : 13px
+    line-height : 1.50em
+    color : #626262
+.about__description
+    padding-top : 10%
+.logo_text
+    font-style : normal
+    font-weight : 500
+    font-size : calc(0.0625*14em)
+    line-height : emCalc(24)
+    letter-spacing : emCalc(4)
+    color : black
+    text-transform : uppercase
+    display : flex
+    align-items : center
+    justify-content : center
+    padding-left : 15px 
+%std_ico
+    @include quadrat_icon(54px)
+    background-size : contain
+.first_logo__icon
+    @extend %std_ico
+    @include bgi("#{$rootDir}/100_icon.svg")
+.second_logo__icon
+    @extend %std_ico
+    @include bgi("#{$rootDir}/bag_icon.svg")
+.first__logo
+    display : flex
+.second__logo
+    padding-top : emCalc(25) 
+    @extend .first__logo
+.works 
+    padding-top : 202px
+.works__icon
+    @extend .services__icon
+.works__menu
+    padding-top : 40px 
+.works_menu__title
+    @extend .about__title
+    font-weight : 600
+.works_menu__items
+    display : flex
+    justify-content : space-around
+    padding-top : 15px 
+.works_menu__item
+    font-weight : 500
+    font-size : emCalc(14)
+    line-height : emCalc(24)
+    letter-spacing : emCalc(4)
+    text-transform : uppercase
+    transition : 1s ease-out
+    color : #BCBCBC
+    cursor : pointer
+    &--active
+        color : #1434E1
+    &:hover
+        color : #3151ED
+.works__photos
+    padding-top : 78px 
+.works__photo
+    height : 450px
+    width : 350px
+    @for $i from 1 through 6
+        &-#{$i}
+            @include bgi('#{$rootDir}/#{$i}_work.jpg')
+            background-repeat : no-repeat 
+            background-size : 100%
+            margin-top : 30px 
+    &-3
+        display : inline-flex
+        align-items : center 
+        justify-content : center
+        &::after
+            content : ''
+            display : block
+            @include bgi('#{$rootDir}/play_button.svg')
+            @include quadrat_icon(65px)
+.works__button
+    padding-top : 52px
+.see_our_works
+    text-transform : uppercase
+    letter-spacing : emCalc(4)
+    font-weight :  500
+    font-size : emCalc(14)
+    line-height : emCalc(28)
+    width : 205px
+    height : 50px
+    background-color : #4737FF  
+    padding : 0
+    margin : 0
+    border : none
+    transition : 1s
+    &:hover
+        background-color : #471DFF  
+        letter-spacing : emCalc(5)
+.testim
+    padding-top : 256px 
+.testim__icon
+    @extend .services__icon
+.testim__title
+    @extend .services_anounce__text
+    padding-top : 73px 
+.testim__pic
+    @include bgi("#{$rootDir}/testim_user-1.jpg")
+    height : 620px
+    width : 445px
+.testim_user
+   padding-top : 101px
+   &__name
+    font-weight : 500
+    font-size : 22px
+    line-height : 32px
+.testim_user__role
+    padding-top : 13px 
+.testim__carousel__controls
+    padding-top : 62px
+.our_clients
+    padding-top : 176px 
+.our_clients>.container>.row
+    padding-top : 102px
+.we_worked_with
+    padding-top : 8px 
+    &__title
+        text-transform : uppercase
+        font-size : emCalc(14)
+        line-height : emCalc(24)
+        letter-spacing : emCalc(4)
+        font-weight : 500 
+        color : #222222
+    &__text
+        font-size : emCalc(18)
+        line-height : emCalc(28)
+        color : $textColor
+        padding-top : 17px 
+footer
+    background-color : #515151
+    height : 240px
+    display : flex
+    justify-content : center
+    align-items : center
+.footer__logo
+    @include bgi("#{$rootDir}/footer_logo.svg")
+    width : 74.31px
+    height : 23.18px
+.partner
+    @for $i from 1 through 5
+        &-#{$i}
+         @include bgi('#{$rootDir}/partner-#{$i}.svg')
+         width : 4em
+         height : 5em
+         background-repeat : no-repeat
+         @if $i == 4
+            width : 8em
+    padding : 76px 0px 139px 0px 
+@include media-breakpoint-down(md)
+    .works_menu__items
+        padding : 10% 0%
+    .testim__title
+        font-size : emCalc(33.84)
+    .we_worked_with
+        padding-top : 50px
+        &__text
+            padding-top : 50px

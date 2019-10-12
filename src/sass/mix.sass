@@ -1,0 +1,14 @@
+@mixin control_button($width,$height)
+    width : $width
+    height : $height
+    border : 0
+    display : inline-flex
+    align-items : center
+    justify-content : center
+@function emCalc($px)
+    @return calc(#{$px} * 0.0625em)
+@mixin quadrat_icon($w)
+    width : $w
+    height : $w
+@mixin bgi($url)
+    background-image : url(#{$url})

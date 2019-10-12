@@ -1,0 +1,16 @@
+{
+  "name": "gravity_website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "first": "cd ../ "
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.23.0-module.beta.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
